@@ -75,7 +75,7 @@ export default function HomePage() {
               <Button variant="outline" size="sm">
                 Student Portal
               </Button>
-              <Button className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-gray-900" size="sm">
+              <Button className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-white" size="sm">
                 Apply Now
               </Button>
             </div>
@@ -145,18 +145,47 @@ export default function HomePage() {
                 committed to developing the next generation of leaderzs and innovators.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-gray-900 font-semibold shadow-xl">
+                <Button size="lg" className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-white font-semibold shadow-xl">
                   Explore Programs
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 backdrop-blur-sm shadow-xl"
+                  className="border-2 border-white text-black hover:bg-white hover:text-gray-900 backdrop-blur-sm shadow-xl"
                 >
                   Virtual Tour
                 </Button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admissions" className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">A message from the VC</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Welcome to the Federal University of Lafia, where we are committed to providing quality education and
+                fostering innovation. As the Vice-Chancellor, I invite you to explore our diverse programs and join a
+                community dedicated to academic excellence and personal growth.
+              </p>
+              
+              <Button className="RGB(157,122,38) text-white">
+                Read More
+                <ChevronRight className="ml-2 w-4 h-4" />
+              </Button>
+            </div>
+            <div>
+              <Image
+                src="/vc.png"
+                alt="Students on campus"
+                width={500}
+                height={400}
+                className="rounded-lg object-cover"
+              />
             </div>
           </div>
         </div>
@@ -203,7 +232,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-[rgb(157,122,38)]/10 text-[rgb(157,122,38)]">About FULAFIA</Badge>
+              <Badge className="mb-4 text-white bg-[rgb(157,122,38)]">About FULAFIA</Badge>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Expanding Access to Quality Higher Education</h2>
               <p className="text-lg text-gray-600 mb-6">
                 Federal University of Lafia is one of Nigeria's newer federal universities, established in 2011 to
@@ -214,21 +243,21 @@ export default function HomePage() {
                 Located in Lafia, Nasarawa State, Nigeria, FULAFIA emphasizes digital learning and research while
                 maintaining a commitment to excellence in teaching and community service.
               </p>
-              <Button className="RGB(157,122,38) text-gray-900">
+              <Button className="RGB(157,122,38) text-white">
                 Learn More About Us
                 <ChevronRight className="ml-2 w-4 h-4" />
               </Button>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <Image
-                src="/placeholder.svg?height=300&width=250"
+                src="/fulafia2.jpg"
                 alt="Students studying"
                 width={250}
                 height={300}
                 className="rounded-lg object-cover"
               />
               <Image
-                src="/placeholder.svg?height=300&width=250"
+                src="/fulafia1.jpg"
                 alt="Campus building"
                 width={250}
                 height={300}
@@ -318,47 +347,6 @@ export default function HomePage() {
       </section>
 
       {/* Admissions Section */}
-      <section id="admissions" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="mb-4 bg-yellow-100 text-yellow-800">Admissions</Badge>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Join Our Academic Community</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Admissions are competitive and follow the guidelines set by Nigeria's Joint Admissions and Matriculation
-                Board (JAMB). Applicants are required to write UTME and meet departmental cut-off marks.
-              </p>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
-                  <span className="text-gray-700">JAMB UTME Registration Required</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
-                  <span className="text-gray-700">Meet Departmental Cut-off Marks</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></div>
-                  <span className="text-gray-700">Post-UTME Screening</span>
-                </div>
-              </div>
-              <Button className="RGB(157,122,38) text-gray-900">
-                Start Application
-                <ChevronRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
-            <div>
-              <Image
-                src="/placeholder.svg?height=400&width=500"
-                alt="Students on campus"
-                width={500}
-                height={400}
-                className="rounded-lg object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Facilities Section */}
       <section className="py-20">
@@ -406,7 +394,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials
       <section className="py-20 bg-yellow-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -451,7 +439,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[rgb(157,122,38)] to-[rgb(157,122,38)]">
@@ -461,10 +449,10 @@ export default function HomePage() {
             Join thousands of students who have chosen FULAFIA for their academic excellence and personal growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-[rgb(157,122,38)] hover:bg-gray-100">
+            <Button size="lg" className="bg-white text-black hover:bg-white hover:text-[rgb(157,122,38)]">
               Apply for Admission
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[rgb(157,122,38)]">
+            <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-[rgb(157,122,38)]">
               Download Brochure
             </Button>
           </div>
