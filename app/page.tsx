@@ -1,9 +1,9 @@
-"use client"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   GraduationCap,
   Users,
@@ -16,26 +16,33 @@ import {
   MapPin,
   Phone,
   Mail,
-} from "lucide-react"
-import logo from "@/public/uni.jpeg"
-import heroImg from "@/public/heroImage.png"
-import { useState } from "react"
+} from "lucide-react";
+import logo from "@/public/uni.jpeg";
+import heroImg from "@/public/heroImage.png";
+import { useState } from "react";
 
 export default function HomePage() {
-  const [navOpen, setNavOpen] = useState(false)
+  const [navOpen, setNavOpen] = useState(false);
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-[rgb(157,122,38)] rounded-full flex items-center justify-center">
-                <Image src={logo} alt="FULAFIA Logo" width={48} height={48} className="rounded-full" />
+                <Image
+                  src={logo}
+                  alt="FULAFIA Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-full"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">FULAFIA</h1>
-                <p className="text-xs text-gray-600">Federal University of Lafia</p>
+                <p className="text-xs text-gray-600">
+                  Federal University of Lafia
+                </p>
               </div>
             </div>
 
@@ -45,28 +52,58 @@ export default function HomePage() {
               onClick={() => setNavOpen(!navOpen)}
               aria-label="Toggle navigation"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d={navOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d={
+                    navOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+                  }
+                />
               </svg>
             </button>
 
             <nav className="hidden md:flex items-center space-x-8">
-              <Link href="#" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium">
+              <Link
+                href="#"
+                className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+              >
                 Home
               </Link>
-              <Link href="#about" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium">
+              <Link
+                href="#about"
+                className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+              >
                 About
               </Link>
-              <Link href="#faculties" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium">
+              <Link
+                href="#faculties"
+                className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+              >
                 Faculties
               </Link>
-              <Link href="#admissions" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium">
+              <Link
+                href="#admissions"
+                className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+              >
                 Admissions
               </Link>
-              <Link href="#research" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium">
+              <Link
+                href="#research"
+                className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+              >
                 Research
               </Link>
-              <Link href="#contact" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium">
+              <Link
+                href="#contact"
+                className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+              >
                 Contact
               </Link>
             </nav>
@@ -75,38 +112,67 @@ export default function HomePage() {
               <Button variant="outline" size="sm">
                 Student Portal
               </Button>
-              <Button className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-white" size="sm">
+              <Button
+                className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-white"
+                size="sm"
+              >
                 Apply Now
               </Button>
             </div>
           </div>
-          {/* Mobile nav */}
           {navOpen && (
             <div className="md:hidden mt-2 bg-white rounded shadow-lg border border-gray-100">
               <nav className="flex flex-col space-y-2 px-4 py-4">
-                <Link href="#" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium" onClick={() => setNavOpen(false)}>
+                <Link
+                  href="#"
+                  className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+                  onClick={() => setNavOpen(false)}
+                >
                   Home
                 </Link>
-                <Link href="#about" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium" onClick={() => setNavOpen(false)}>
+                <Link
+                  href="#about"
+                  className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+                  onClick={() => setNavOpen(false)}
+                >
                   About
                 </Link>
-                <Link href="#faculties" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium" onClick={() => setNavOpen(false)}>
+                <Link
+                  href="#faculties"
+                  className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+                  onClick={() => setNavOpen(false)}
+                >
                   Faculties
                 </Link>
-                <Link href="#admissions" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium" onClick={() => setNavOpen(false)}>
+                <Link
+                  href="#admissions"
+                  className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+                  onClick={() => setNavOpen(false)}
+                >
                   Admissions
                 </Link>
-                <Link href="#research" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium" onClick={() => setNavOpen(false)}>
+                <Link
+                  href="#research"
+                  className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+                  onClick={() => setNavOpen(false)}
+                >
                   Research
                 </Link>
-                <Link href="#contact" className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium" onClick={() => setNavOpen(false)}>
+                <Link
+                  href="#contact"
+                  className="text-gray-700 hover:text-[rgb(157,122,38)] font-medium"
+                  onClick={() => setNavOpen(false)}
+                >
                   Contact
                 </Link>
                 <div className="flex flex-col gap-2 mt-4">
                   <Button variant="outline" size="sm">
                     Student Portal
                   </Button>
-                  <Button className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-gray-900" size="sm">
+                  <Button
+                    className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-gray-900"
+                    size="sm"
+                  >
                     Apply Now
                   </Button>
                 </div>
@@ -115,20 +181,24 @@ export default function HomePage() {
           )}
         </div>
       </header>
-
-      {/* Hero Section */}
-      {/* Hero Section */}
-      {/* Hero Section */}
-      {/* Hero Section */}
+      
       <section className="relative h-[700px] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
-        <Image
-          src={heroImg}
-          alt="FULAFIA Campus"
-          fill
-          className="object-cover"
-        />
-        <div className="relative container mx-auto px-4 h-full flex items-center">
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70 z-10"></div>
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src="/fulafia-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+  
+        <div className="relative container mx-auto px-4 h-full flex items-center z-20">
           <div className="max-w-4xl">
             <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
               <Badge className="mb-6 bg-[rgb(157,122,38)] text-gray-900 border-0 font-semibold px-4 py-2">
@@ -137,15 +207,19 @@ export default function HomePage() {
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
                 Federal University of Lafia
               </h1>
-             <p className="text-xl md:text-2xl font-semibold mb-6 text-white drop-shadow-md">
+              <p className="text-xl md:text-2xl font-semibold mb-6 text-white drop-shadow-md">
                 Integrity, Innovation, and Excellence
               </p>
               <p className="text-base md:text-lg mb-8 text-white/95 leading-relaxed drop-shadow-md">
-                A world-class institution recognized for excellence in teaching, research, and community service, 
-                committed to developing the next generation of leaderzs and innovators.
+                A world-class institution recognized for excellence in teaching,
+                research, and community service, committed to developing the
+                next generation of leaders and innovators.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-white font-semibold shadow-xl">
+                <Button
+                  size="lg"
+                  className="bg-[rgb(157,122,38)] hover:bg-[rgb(137,102,18)] text-white font-semibold shadow-xl"
+                >
                   Explore Programs
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
@@ -161,18 +235,21 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <section id="admissions" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">A message from the VC</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                A message from the VC
+              </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Welcome to the Federal University of Lafia, where we are committed to providing quality education and
-                fostering innovation. As the Vice-Chancellor, I invite you to explore our diverse programs and join a
-                community dedicated to academic excellence and personal growth.
+                Welcome to the Federal University of Lafia, where we are
+                committed to providing quality education and fostering
+                innovation. As the Vice-Chancellor, I invite you to explore our
+                diverse programs and join a community dedicated to academic
+                excellence and personal growth.
               </p>
-              
+
               <Button className="RGB(157,122,38) text-white">
                 Read More
                 <ChevronRight className="ml-2 w-4 h-4" />
@@ -190,7 +267,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Quick Stats */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -226,22 +302,27 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section id="about" className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 text-white bg-[rgb(157,122,38)]">About FULAFIA</Badge>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Expanding Access to Quality Higher Education</h2>
+              <Badge className="mb-4 text-white bg-[rgb(157,122,38)]">
+                About FULAFIA
+              </Badge>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Expanding Access to Quality Higher Education
+              </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Federal University of Lafia is one of Nigeria's newer federal universities, established in 2011 to
-                expand access to quality higher education. The university has quickly grown in terms of academic
-                offerings, infrastructure, and student population.
+                Federal University of Lafia is one of Nigeria's newer federal
+                universities, established in 2011 to expand access to quality
+                higher education. The university has quickly grown in terms of
+                academic offerings, infrastructure, and student population.
               </p>
               <p className="text-gray-600 mb-8">
-                Located in Lafia, Nasarawa State, Nigeria, FULAFIA emphasizes digital learning and research while
-                maintaining a commitment to excellence in teaching and community service.
+                Located in Lafia, Nasarawa State, Nigeria, FULAFIA emphasizes
+                digital learning and research while maintaining a commitment to
+                excellence in teaching and community service.
               </p>
               <Button className="RGB(157,122,38) text-white">
                 Learn More About Us
@@ -267,12 +348,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Vision & Mission */}
       <section className="py-20 bg-yellow-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Vision & Mission</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Vision & Mission
+            </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-[rgb(157,122,38)]/20">
@@ -284,8 +366,8 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  To become a world-class institution recognized for excellence in teaching, research, and community
-                  service.
+                  To become a world-class institution recognized for excellence
+                  in teaching, research, and community service.
                 </p>
               </CardContent>
             </Card>
@@ -298,44 +380,80 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  To attract and develop talented students and staff for the purpose of contributing to national
-                  development through high-quality education and research.
+                  To attract and develop talented students and staff for the
+                  purpose of contributing to national development through
+                  high-quality education and research.
                 </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
-
       {/* Faculties Section */}
       <section id="faculties" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-yellow-100 text-yellow-800">Academic Excellence</Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Faculties</h2>
+            <Badge className="mb-4 bg-yellow-100 text-yellow-800">
+              Academic Excellence
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Faculties
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              FULAFIA offers undergraduate and postgraduate programs through multiple faculties
+              FULAFIA offers undergraduate and postgraduate programs through
+              multiple faculties
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { name: "Faculty of Science", programs: "Physics, Chemistry, Biology, Mathematics" },
-              { name: "Faculty of Arts", programs: "English, History, Philosophy, Languages" },
-              { name: "Faculty of Social Sciences", programs: "Economics, Political Science, Sociology" },
-              { name: "Faculty of Basic Medical Sciences", programs: "Anatomy, Physiology, Biochemistry" },
-              { name: "Faculty of Education", programs: "Educational Psychology, Curriculum Studies" },
-              { name: "Faculty of Management Science", programs: "Accounting, Business Administration" },
-              { name: "Faculty of Agriculture", programs: "Crop Production, Animal Science" },
-              { name: "Faculty of Computing", programs: "Computer Science, Cybersecurity, IT" },
-              { name: "College of Medicine", programs: "Medicine & Surgery (Recently Accredited)" },
+              {
+                name: "Faculty of Science",
+                programs: "Physics, Chemistry, Biology, Mathematics",
+              },
+              {
+                name: "Faculty of Arts",
+                programs: "English, History, Philosophy, Languages",
+              },
+              {
+                name: "Faculty of Social Sciences",
+                programs: "Economics, Political Science, Sociology",
+              },
+              {
+                name: "Faculty of Basic Medical Sciences",
+                programs: "Anatomy, Physiology, Biochemistry",
+              },
+              {
+                name: "Faculty of Education",
+                programs: "Educational Psychology, Curriculum Studies",
+              },
+              {
+                name: "Faculty of Management Science",
+                programs: "Accounting, Business Administration",
+              },
+              {
+                name: "Faculty of Agriculture",
+                programs: "Crop Production, Animal Science",
+              },
+              {
+                name: "Faculty of Computing",
+                programs: "Computer Science, Cybersecurity, IT",
+              },
+              {
+                name: "College of Medicine",
+                programs: "Medicine & Surgery (Recently Accredited)",
+              },
             ].map((faculty, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-lg text-gray-900">{faculty.name}</CardTitle>
+                  <CardTitle className="text-lg text-gray-900">
+                    {faculty.name}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm mb-4">{faculty.programs}</p>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {faculty.programs}
+                  </p>
                   <Button variant="outline" size="sm" className="w-full">
                     View Programs
                   </Button>
@@ -345,17 +463,20 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Admissions Section */}
-
       {/* Facilities Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-yellow-100 text-yellow-800">Campus Life</Badge>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">World-Class Facilities</h2>
+            <Badge className="mb-4 bg-yellow-100 text-yellow-800">
+              Campus Life
+            </Badge>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              World-Class Facilities
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our permanent site features modern infrastructure designed for academic excellence
+              Our permanent site features modern infrastructure designed for
+              academic excellence
             </p>
           </div>
 
@@ -364,21 +485,31 @@ export default function HomePage() {
               {
                 icon: Building,
                 title: "Modern Lecture Halls",
-                description: "State-of-the-art classrooms with multimedia equipment",
+                description:
+                  "State-of-the-art classrooms with multimedia equipment",
               },
               {
                 icon: BookOpen,
                 title: "Digital Library",
-                description: "Extensive collection of books and digital resources",
+                description:
+                  "Extensive collection of books and digital resources",
               },
               {
                 icon: Award,
                 title: "Research Labs",
-                description: "Well-equipped laboratories for scientific research",
+                description:
+                  "Well-equipped laboratories for scientific research",
               },
-              { icon: Users, title: "Student Hostels", description: "Comfortable accommodation for students" },
+              {
+                icon: Users,
+                title: "Student Hostels",
+                description: "Comfortable accommodation for students",
+              },
             ].map((facility, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <Card
+                key={index}
+                className="text-center hover:shadow-lg transition-shadow"
+              >
                 <CardHeader>
                   <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <facility.icon className="w-8 h-8 text-yellow-600" />
@@ -386,14 +517,15 @@ export default function HomePage() {
                   <CardTitle className="text-lg">{facility.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm">{facility.description}</p>
+                  <p className="text-gray-600 text-sm">
+                    {facility.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </div>
       </section>
-
       {/* Testimonials
       <section className="py-20 bg-yellow-50">
         <div className="container mx-auto px-4">
@@ -440,25 +572,33 @@ export default function HomePage() {
           </div>
         </div>
       </section> */}
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[rgb(157,122,38)] to-[rgb(157,122,38)]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Begin Your Journey?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Begin Your Journey?
+          </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Join thousands of students who have chosen FULAFIA for their academic excellence and personal growth.
+            Join thousands of students who have chosen FULAFIA for their
+            academic excellence and personal growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-black hover:bg-white hover:text-[rgb(157,122,38)]">
+            <Button
+              size="lg"
+              className="bg-white text-black hover:bg-white hover:text-[rgb(157,122,38)]"
+            >
               Apply for Admission
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-black hover:bg-white hover:text-[rgb(157,122,38)]">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-black hover:bg-white hover:text-[rgb(157,122,38)]"
+            >
               Download Brochure
             </Button>
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
@@ -470,14 +610,20 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="font-bold">FULAFIA</h3>
-                  <p className="text-sm text-gray-400">Federal University of Lafia</p>
+                  <p className="text-sm text-gray-400">
+                    Federal University of Lafia
+                  </p>
                 </div>
               </div>
-              <p className="text-gray-400 text-sm mb-4">Integrity, Innovation, and Excellence</p>
+              <p className="text-gray-400 text-sm mb-4">
+                Integrity, Innovation, and Excellence
+              </p>
               <div className="space-y-2 text-sm">
                 <div className="flex items-center">
                   <MapPin className="w-4 h-4 mr-2 text-yellow-400" />
-                  <span className="text-gray-400">Lafia, Nasarawa State, Nigeria</span>
+                  <span className="text-gray-400">
+                    Lafia, Nasarawa State, Nigeria
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-4 h-4 mr-2 text-yellow-400" />
@@ -571,11 +717,12 @@ export default function HomePage() {
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Federal University of Lafia. All rights reserved.
+              © {new Date().getFullYear()} Federal University of Lafia. All
+              rights reserved.
             </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
